@@ -1,0 +1,84 @@
+*{
+	margin:0;
+	padding:0;
+	border:0;
+	outline:0;
+	font-size:100%;
+	font-family:sans-serif;
+	vertical-align:baseline;
+	background:transparent;
+	color:#444;
+}
+body { 
+	font:13px/1.231 
+	sans-serif; 
+	*font-size:small; 
+}
+
+ul li{list-style:none;}
+
+::-moz-selection{ background: #FF5E99; color:#fff; text-shadow: none; }
+::selection { background:#FF5E99; color:#fff; text-shadow: none; }
+
+blockquote:before, blockquote:after, q:before, q:after{content:''; content:none; }
+
+/*------anchor------*/
+a, a:link{
+	color:#6db0da;
+	text-decoration:none;
+}
+a:hover, a:active{
+	color:#6db0da;
+}
+
+/*------font-------*/
+@font-face{
+	font-family:'LeagueGothicRegular';
+	src:url('../fonts/League_Gothic-webfont.eot');
+	src:local('☺'), 
+		url('../fonts/League_Gothic-webfont.woff') format('woff'), 
+		url('../League_Gothic-webfont.ttf') format('truetype'), 
+		url('../fonts/League_Gothic-webfont.svg#webfont1Lb5Pdit') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+@font-face{
+	font-family:'LaneNarrowRegular';
+	src:url('../fonts/LANENAR_-webfont.eot?') format('eot'),
+        url('../fonts/LANENAR_-webfont.woff') format('woff'),
+        url('../fonts/LANENAR_-webfont.ttf') format('truetype'),
+        url('../fonts/LANENAR_-webfont.svg#webfontMAZXZguX') format('svg');
+	font-weight:normal;
+	font-style:normal;
+}
+
+/*-------headers--------*/
+h2, h3{
+	font-family:'LeagueGothicRegular',Arial,Helvetica,sans-serif;
+	text-transform:uppercase;
+	color:#575757;
+	margin-bottom:20px;
+}
+h2{
+	font-size:72px;
+	line-height:80px;
+}
+h3{
+	font-size:40px;
+	line-height:45px;
+}
+h4{
+	font-size:14px;
+	line-height:20px;
+	color:#575757;
+	margin-bottom:20px;
+}
+p{
+	line-height:20px;
+	margin-bottom:20px;
+}
+
+/*--------clearflow--------*/
+.clearfix:before, .clearfix:after {content: ""; display: block; height: 0; visibility: hidden;} 
+.clearfix:after { clear: both; }
+.clearfix { zoom: 1; }
