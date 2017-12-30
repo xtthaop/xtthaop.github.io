@@ -7,8 +7,9 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="fancybox/jquery.fancybox-1.3.4.css">
-    <link rel="stylesheet" href="css/modal-window.css">
+
+    <link rel="stylesheet" href="./photo-viewer/photo-viewer.css">
+    <link rel="stylesheet" href="./window/modal-window.css">
 </head>
 
 <body>
@@ -56,45 +57,52 @@
             <div class="recent-work columns">
                 <h3>My Recent Work</h3>
                 <div class="two-column" id="share">
-                    <figure><img src="img/work_1.jpg" alt="Image"></figure>
+                    <figure>
+                        <img src="img/work_1.jpg" alt="Image">
+                        <span></span>
+                    </figure>
                 </div>
-                <div class="two-column last">
-                    <figure><a href="img/pricing_table_3.jpg" rel="recent_work" class="zoom"><img src="img/work_2.jpg" alt="Image"></a></figure>
+                <div class="two-column last" id="share1">
+                    <figure><img src="img/work_2.jpg" alt="Image"><span></span></figure>
                 </div>
-                <div id="share-options">
-                    <img src="img/modal-window-message.gif" width="284" height="167" alt="Share the magic of Monsieur Pigeon with your chums" id="message" />
-                    <div id="links"><a href="http://www.facebook.com/"><img src="img/icon-facebook.png" width="25" height="25" alt="Facebook icon" /></a>
-                    <a href="http://www.pinterest.com/"><img src="img/icon-pinterest.png" width="25" height="25" alt="Pinterest icon" /></a>
-                    <a href="http://www.twitter.com/"><img src="img/icon-twitter.png" width="25" height="25" alt="Twitter icon" /></a></div>
+                <div id="window-content" class="win-content">
+                    <img src="./img/special_alert.jpg" class="cover" />
+                    <span>
+                        <a href="">GitHub源码下载</a>
+                        <a href="">CDSN博客文章</a>
+                    </span>
+                </div>
+                <div id="window-content1" class="win-content">
+                    <img src="./img/price_count.jpg" class="cover" />
+                    <span>
+                        <a href="">GitHub源码下载</a>
+                        <a href="">CDSN博客文章</a>
+                    </span>
                 </div>
             </div>
              <div class="my-services columns">
-                <h3>What can I do</h3>
+                <h3>What will I do</h3>
                 <div class="three-column">
                     <h4>Web Design</h4>
-                    <p>This is just a place holder for people who need type to visualize what the actual copy might look like if it were real content.</p>
+                    <p>I'll be here to share my latest web front-end design and other blog articles that I have recently collected.</p>
                 </div>
                 <div class="three-column">
                     <h4>Graphic Design</h4>
-                    <p>This is just a place holder for people who need type to visualize what the actual copy might look like if it were real content.</p>
-                </div>
-                <div class="three-column last">
-                    <h4>Identity / Branding</h4>
-                    <p>This is just a place holder for people who need type to visualize what the actual copy might look like if it were real content.</p>
+                    <p>I'm a graphic design enthusiast, and I'll share some of the skills of using PS and AI</p>
                 </div>
             </div>
             <div class="one-column columns testimony">
                 <div class="clearfix says">
                     <figure class="marginRight"><img src="img/client_image_1.jpg" alt="Image" /></figure>
                     <blockquote>
-                        <p>This is just a place holder for people who need type to visualize what the actual copy might look like if it were real content.This is just a place holder for people who need type to visualize what the actual copy might look like if it were real content.</p>
-                        <cite>&mdash; <a href="#">Joefrey Mahusay</a></cite> </blockquote>
+                        <p>We're here to put a dent in the universe. Otherwise why else even be here?</p>
+                        <cite>&mdash; <a href="#">Steve Jobs</a></cite> </blockquote>
                 </div>
                 <div class="clearfix says">
-                    <figure class="marginRight"><img src="img/client_image_1.jpg" alt="Image" /></figure>
+                    <figure class="marginRight"><img src="img/client_image_2.jpg" alt="Image" /></figure>
                     <blockquote>
-                        <p>This is just a place holder for people who need type to visualize what the actual copy might look like if it were real content.This is just a place holder for people who need type to visualize what the actual copy might look like if it were real content.</p>
-                        <cite>&mdash; <a href="#">Joefrey Mahusay</a></cite> </blockquote>
+                        <p>We need to use telescopes to look at innovation, and to see the quality with a microscope.</p>
+                        <cite>&mdash; <a href="#">Lei Jun</a></cite> </blockquote>
                 </div>
             </div>
 		</section>
@@ -104,25 +112,38 @@
             <header>
                 <h2>Who is this Guy?</h2>
             </header>
-            <figure class="marginRight"><img src="img/me.gif" alt="Image" /></figure>
-            <p>This is just a place holder for people who need type to visualize what the actual copy might look like if it were real content. This is just a place holder for people who need type to visualize what the actual copy might look like if it were real content. This is just a place holder for people who need type to visualize what the actual copy might look like if it were real content. </p>
-            <p>This is just a place holder for people who need type to visualize what the actual copy might look like if it were real content. This is just a place holder for people who need type to visualize what the actual copy might look like if it were real content. This is just a place holder for people who need type to visualize what the actual copy might look like if it were real content. This is just a place holder for people who need type to visualize what the actual.</p>
-            <div class="clearfix"></div>
+            <figure id="photo-viewer" class="marginRight"></figure>
+            <p>Hello, everyone! My name is Jason Chen. I like web front-end design, and I am actively learning it. I am studying at Taiyuan Institute of technology. I am a senior student who is going to graduate. My major is chemical engineering and technology. During the University, I took an editor of the editorial department of the school newspaper. The contents of the work were the arrangement of the newspaper. I had planned to organize the essay competition in the school.</p>
+            <p>I am also a Mi fans. I have participated in many activities organized by Xiaomi company or the department related to Xiaomi, which has contributed to the content of the group in the Xiaomi community for a year.</p> 
+            <div class="clearfix"></div> 
+            <div id="thumbnails">
+                <a href="./photo-viewer/photo-1.jpg" class="thumb active" title=""><img src="./photo-viewer/thumb-1.jpg" alt="" /></a>
+                <a href="./photo-viewer/photo-2.jpg" class="thumb" title=""><img src="./photo-viewer/thumb-2.jpg" alt="" /></a>
+                <a href="./photo-viewer/photo-3.jpg" class="thumb" title=""><img src="./photo-viewer/thumb-3.jpg" alt="" /></a>
+            </div>  
+            <div class="clearfix"></div>  
             <h3>Nerdy Skills</h3>
             <ul class="skills">
-                <li>Design <span class="bar_100"><span class="percent">100%</span></span></li>
-                <li>HTML5 / CSS3 <span class="bar_90"><span class="percent">90%</span></span></li>
-                <li>Wordpress / CMS<span class="bar_50"><span class="percent">50%</span></span></li>
-                <li>jQuery<span class="bar_70"><span class="percent">70%</span></span></li>
-                <li>Search Engine Optimzation<span class="bar_60"><span class="percent">60%</span></span></li>
+                <li>Design <span class="bar_99"><span class="percent"></span></span></li>
+                <li>HTML5 / CSS3 <span class="bar_91"><span class="percent"></span></span></li>
+                <li>javascript<span class="bar_80"><span class="percent"></span></span></li>
+                <li>jQuery<span class="bar_70"><span class="percent"></span></span></li>
+                <li>Ps / Ai<span class="bar_60"><span class="percent"></span></span></li>
             </ul>
         </section>
         <!-- end section -->
 
-        <section id="collection">
+        <section id="collection" class="clearfix">
             <header>
                 <h2>My Collection</h2>
             </header>
+            <ul class="list">
+                <li><a>JS实现循环给元素绑定事件的几个常用方法 - kingliguo的博客 - CSDN博客</a></li>
+                <li><a>JS 如何将 HTML 页面导出为多页 PDF - CSDN博客</a></li>
+                <li><a>如何优雅的选择字体(font-family) - 前端学习 - SegmentFault</a></li>
+                <li><a>Css 详细解读定位属性 position 以及参数 - FungLeo's Blog - CSDN博客</a></li>
+                <li><a>查看更多 》》</a></li>
+            </ul>
         </section>
         <!-- end section -->
 
@@ -130,36 +151,21 @@
             <header>
                 <h2>Get in touch</h2>
             </header>
-            <form action="#" method="post">
-                <p>
-                    <input type="text" name="name"  value="Your Name" id="name" onblur="if (this.value == ''){this.value = 'Your Name'; }" onfocus="if (this.value == 'Your Name') {this.value = '';}" />
-                </p>
-                <p>
-                    <input type="text" name="email" value="Your Email" id="email"  onblur="if (this.value == ''){this.value = 'Your Email'; }" onfocus="if (this.value == 'Your Email') {this.value = '';}" />
-                </p>
-                <p>
-                    <input type="text" name="url" value="Your Site" id="url" onblur="if (this.value == ''){this.value = 'Your Site'; }" onfocus="if (this.value == 'Your Site') {this.value = '';}" />
-                </p>
-                <p>
-                    <textarea cols="20" rows="7" name="message" id="message" onblur="if (this.value == ''){this.value = 'Your Message'; }" onfocus="if (this.value == 'Your Message') {this.value = '';}" >Your Message</textarea>
-                </p>
-                <p>
-                    <input type="submit" name="submit" value="Send Message" class="button" />
-                </p>
-            </form>
             <div class="social_wrapper">
                 <h3>Where to find me?</h3>
                 <ul class="social">
-                    <li class="dribble"><a href="#">Dribble</a></li>
-                    <li class="twitter"><a href="#">Twitter</a></li>
-                    <li class="lastfm"><a href="#">Last FM</a></li>
-                    <li class="facebook"><a href="#">Facebook</a></li>
-                    <li class="location"><a href="#">Location</a></li>
-                    <li class="forrst"><a href="#">Forrst</a></li>
+                    <li class="github"><a href="https://github.com/xtthaop" target="_blank">GitHub</a></li>
+                    <li class="csdn"><a href="http://blog.csdn.net/u011741996?ref=toolbar" target="_blank">CSDN</a></li>
+                    <li class="QQ"><a href="javascript:void(0);">QQ : 961116034</a></li>
+                    <li class="wechat"><a href="javascript:void(0);">WeChat : abcd1538346</a></li>
                 </ul>
+                <!-- <div class="pop"></div> -->
+                <script>
+
+                </script>
             </div>
             <div class="copyright">
-                <p><small>This <abbr title="Hypertext Markup Language 5">HTML5</abbr> Single Page Portfolio was created <em>by</em> <a href="http://webdesigneraid.com/">WebDesignerAid.com</a> <em>for</em> <a href="http://speckyboy.com/">Speckyboy</a></small></p>
+                <p><small>welcome to xtthaop.github.io 2017-2018</small></p>
             </div>
             <!--end copyright--> 
         </section>
@@ -175,6 +181,10 @@
 
 <script src="./window/modal-window.js"></script>
 <script src="./window/window-init.js"></script>
+
+<script src="./photo-viewer/photo-viewer.js"></script>
+
+<script src="./js/skill-perscent.js"></script>
 </body>
 
 </html>
