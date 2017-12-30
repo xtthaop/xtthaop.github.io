@@ -15,7 +15,6 @@ $(function() {
     
     $tooltip.css({opacity : 0}).show();
         
-    /*first preload images (thumbs and large images)*/
     var loaded  = 0;
     $links.each(function(i){
         var $link = $(this);
@@ -23,18 +22,11 @@ $(function() {
             onComplete : function(){
                 ++loaded;
                 if(loaded == total_images){
-                    //all images preloaded,
-                    //show ps_container and initialize events
                     $loader.hide();
                     $ps_container.show();
-                    //when mouse enters the pages (the dots),
-                    //show the tooltip,
-                    //when mouse leaves hide the tooltip,
-                    //clicking on one will display the respective image 
                     $links.bind('mouseenter',showTooltip)
                           .bind('mouseleave',hideTooltip)
                           .bind('click',showImage);
-                    //navigate through the images
                     $ps_next.bind('click',nextImage);
                     $ps_prev.bind('click',prevImage);
                 }
@@ -46,16 +38,11 @@ $(function() {
         var $link           = $(this),
             idx             = $link.index(),
             linkOuterWidth  = $link.outerWidth(),
-            //this holds the left value for the next position
-            //of the tooltip
             left            = parseFloat(idx * linkOuterWidth) - $tooltip.width()/2 + linkOuterWidth/2,
-            //the thumb image source
             $thumb          = $link.find('a').attr('rel'),
             imageLeft;
         
-        //if we are not hovering the current one
         if(currentHovered != idx){
-            //check if we will animate left->right or right->left
             if(currentHovered != -1){
                 if(currentHovered < idx){
                     imageLeft   = 75;
@@ -66,30 +53,22 @@ $(function() {
             }
             currentHovered = idx;
             
-            //the next thumb image to be shown in the tooltip
             var $newImage = $('<img/>').css('left','0px').attr('src',$thumb);
-            
-            //if theres more than 1 image 
-            //(if we would move the mouse too fast it would probably happen)
-            //then remove the oldest one (:last)
+
             if($ps_preview_wrapper.children().length > 1)
                 $ps_preview_wrapper.children(':last').remove();
             
-            //prepend the new image
             $ps_preview_wrapper.prepend($newImage);
             
             var $tooltip_imgs       = $ps_preview_wrapper.children(),
                 tooltip_imgs_count  = $tooltip_imgs.length;
                 
-            //if theres 2 images on the tooltip
-            //animate the current one out, and the new one in
             if(tooltip_imgs_count > 1){
                 $tooltip_imgs.eq(tooltip_imgs_count-1)
                              .stop()
                              .animate({
                                 left:-imageLeft+'px'
                               },150,function(){
-                                    //remove the old one
                                     $(this).remove();
                               });
                 $tooltip_imgs.eq(0)
@@ -105,7 +84,6 @@ $(function() {
     }
     
     function hideTooltip(){
-        //hide / fade out the tooltip
         $tooltip.stop().animate({opacity:0},150);}
     
     function showImage(e){
@@ -115,45 +93,34 @@ $(function() {
             $currentImage       = $ps_image_wrapper.find('img'),
             currentImageWidth   = $currentImage.width();
         
-        //if we click the current one return
         if(current == idx) return false;
         
-        //add class selected to the current page / dot
         $links.eq(current).removeClass('selected');
         $link.addClass('selected');
-        
-        //the new image element
+
         var $newImage = $('<img/>').css('left',currentImageWidth + 'px')
                                    .attr('src',$image);
-        
-        //if the wrapper has more than one image, remove oldest
+
         if($ps_image_wrapper.children().length > 1){
             $ps_image_wrapper.children(':last').remove();
         }
-        
-        //prepend the new image
+
         $ps_image_wrapper.prepend($newImage);
-        
-        //the new image width. 
-        //This will be the new width of the ps_image_wrapper
+
         var newImageWidth   = $newImage.width();
-    
-        //check animation direction
+
         if(current > idx){
             $newImage.css('left',-newImageWidth + 'px');
             currentImageWidth = -newImageWidth;
         }
         current = idx;
-        //animate the new width of the ps_image_wrapper 
-        //(same like new image width)
+
         $ps_image_wrapper.stop().animate({
             width   : newImageWidth == 0 ? 636+'px' : + newImageWidth + 'px'
         },350);
-        //animate the new image in
         $newImage.stop().animate({
             left    : '0px'
         },350);
-        //animate the old image out
         $currentImage.stop().animate({
             left    : -currentImageWidth + 'px'
         },350);
