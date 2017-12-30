@@ -74,10 +74,10 @@ nav .bg_bottom{
 	z-index:999999999;
 	margin:-4px 0 0 -4px;
 }*/
-.loader{
+/* .loader{
 	background:url(../img/load.gif) no-repeat center center;
 	height:30px;
-}
+} */
 .ps_container{
 	display:none;
 	width:656px;
