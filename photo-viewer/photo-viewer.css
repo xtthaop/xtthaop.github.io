@@ -6,23 +6,23 @@
 }
 #photo-viewer img{
 	position: absolute;
-  	max-width: 100%;
-  	max-height: 100%;
-  	top: 50%;
-  	left: 50%;
+	max-width: 100%;
+	max-height: 100%;
+	top: 50%;
+	left: 50%;
 }
 #photo-viewer.is-loading:after {
-    content:url('../img/load.gif');
-    position:absolute;
-    top:0;
-    left:0;
+	content:url('../img/load.gif');
+	position:absolute;
+	top:0;
+	left:0;
 }
 /********** THUMBNAILS **********/
 #thumbnails {
-  	margin-bottom:20px;
-  	height:60px;
-  	float:left;
+	margin-bottom:20px;
+	height:60px;
+	float:left;
 }
 #thumbnails a.active {
-  	opacity: 0.3;
+	opacity: 0.3;
 }
