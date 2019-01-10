@@ -1,21 +1,13 @@
-/********** MAIN PICTURE **********/
-#photo-viewer{
-	width:245px;
-	height:315px;
-	overflow:hidden;
-}
-#photo-viewer img{
-	position: absolute;
-	max-width: 100%;
-	max-height: 100%;
-	top: 50%;
-	left: 50%;
-}
-#photo-viewer.is-loading:after {
-	content:url('../img/load.gif');
-	position:absolute;
-	top:0;
-	left:0;
+/********** 加载样式 **********/
+.is-loading:after {
+	content: '';
+	background: url(../img/load.gif);
+	background-size: contain;
+	display: block;
+	width:30px;
+	height:30px;
+	margin-top: 19px;
+	float: right;
 }
 /********** THUMBNAILS **********/
 #thumbnails {

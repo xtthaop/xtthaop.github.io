@@ -1,32 +1,30 @@
-var request;
-var $current;
-var cache   =  {};
+var request; //声明当前点击请求变量
+var $current; //声明当前显示的图片标签变量
+var cache   =  {}; //图片和下载状态对象缓存
 var $frame  =  $('#photo-viewer');
 var $thumbs =  $('.thumb');
 
+//图片显示到父元素中的函数
 function crossfade($img) {
-    if ($current) {
-        $current.stop().fadeOut('slow')
-    }
-    $img.css({                         // Set the CSS margins for the image
-        marginLeft: -$img.width() / 2,   // Negative margin of half image's width
-        marginTop: -$img.height() / 2    // Negative margin of half image's height
-    });
+    $current && $current.hide();
     $img.stop().fadeTo('slow', 1);
     $current = $img;
 }
+
+//缩略图监听点击事件
 $(document).on('click', '.thumb', function(e){
-    var $img,
-        src = this.href;
-        request = src; 
-    e.preventDefault();
+    e.preventDefault(); 
     $thumbs.removeClass('active');
-    $(this).addClass('active');
-    if (cache.hasOwnProperty(src)) {
-        if (cache[src].isLoading === false) {
-            crossfade(cache[src].$img);
-        }
+    $(this).addClass('active');//清除所有按钮选中状态，给当前按钮添加选中状态
+    var $img;
+    var src = this.href;
+    request = src;
+    if (cache.hasOwnProperty(src) && !cache[src].isLoading) {
+        //提高执行效率重复点击不重复执行代码使用缓存中内容
+        $frame.removeClass('is-loading')
+        crossfade(cache[src].$img); 
     } else {
+        //图片加载
         $img = $('<img/>');
         cache[src] = {
             $img: $img,
@@ -48,4 +46,5 @@ $(document).on('click', '.thumb', function(e){
     }
 });
 
-$('.thumb').eq(0).click();
+//默认点击第一张缩略图
+$thumbs.eq(0).click();
