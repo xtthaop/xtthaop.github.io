@@ -1,0 +1,31 @@
+/* ----skills---- */
+.skills{
+	padding:0; 
+	margin:0;
+	position:relative;
+}
+.skills li{
+	padding:10px;
+	border-bottom:3px solid #d5e7f3;
+	list-style:none;
+	font-weight:normal;
+	color:#575757;
+	font-family: "LeagueGothicRegular", Arial, Helvetica, sans-serif;
+	font-size:27px;
+	text-transform:uppercase;
+}
+.skills li span{
+	position:absolute;
+	right:0;
+	font-weight:normal;
+}
+span[class^="bar"]{
+  background:url(../img/bar_graph.gif) repeat-x right .3em;
+  width:0;
+	height:20px;
+}
+
+.skills li .percent{
+	position:absolute;
+	left:-55px;
+}
