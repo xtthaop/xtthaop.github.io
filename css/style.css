@@ -1,45 +1,31 @@
 @charset "utf-8";
 
-#page{ width:960px; margin:0 auto; }
-
-/*--------aside-------*/
-aside{
-	float:left;
-	width:248px;
-	position:fixed;
-	padding-top:10px;
-}
+#page{background:#ccc;}
 
 /*--------nav--------*/
-nav{ text-align:center; }
-nav .logo{
-	font-family: "LeagueGothicRegular", Arial, Helvetica, sans-serif;
-	font-size:43px;
-	text-transform:uppercase;
-	text-align:center;
-	color:#a08784;
-	text-decoration:none;
-	margin:20px 0;
-	display:block;
-	text-shadow: 0px 1px 0px #fff;
+nav{ 
+	width:100%;
+	background:#333;
+	border-bottom: 10px solid #ccc;
+	position: fixed;
+	top:0;
+	overflow: hidden;
+	z-index:1000;
 }
-nav .logo span{
-	font-size:15px;
-	display:block;
-	background:url(../img/a_portfolio_bg.png) no-repeat center;
-	color:#c4bab7;
-}
-nav ul{	
+nav ul{
 	font-size:30px;
-	padding-top:30px;
-	background:url(../img/nav_bg.png) no-repeat top center;
+	float:left;
+	padding:10px 30px;
 	text-transform:uppercase;
+}
+nav ul li{
+	float: left;
+	padding-right: 20px;
 }
 nav ul li a, nav ul li a:link{
 	font-family: "LeagueGothicRegular", Arial, Helvetica, sans-serif;
-	color:#7d6865;
+	color:#fff;
 	text-decoration:none;
-	padding:10px 0 10px 0;
 	display:block;
 	text-shadow: #fff 0px 1px 0px;
 }
@@ -47,21 +33,18 @@ nav ul li a:hover{
 	text-decoration:none;
 	color:#634d4a;
 }
-nav .bg_bottom{
-	background:url(../img/nav_bg.png) no-repeat bottom center;
-	height:30px;
-}
+
+/* ----languages---- */
+.languages{padding:18px 30px;font-size:14px;float: right;}
+.languages a{margin:5px;}
 
 /* ----content---- */
 #main-content{
-	float:right;
+	background:#fff;
 	width:670px;
+	margin: 0 auto;
+	padding: 0 20px;
 }
-
-/* ----languages---- */
-.languages{padding-right:10px;}
-.languages li{float: right; margin:5px;}
-.languages li a{color:#ccc;}
 
 /* ----header---- */
 .header {
@@ -79,9 +62,8 @@ nav .bg_bottom{
 
 /* ----sections---- */
 #home, #about, #contact{
-	margin-bottom:500px;
+	padding:80px 0 420px 0;
 	width:100%;
-	padding-top:15px;
 }
 
 /* ----columns---- */
@@ -213,16 +195,9 @@ nav .bg_bottom{
 
 /* ----copyright---- */
 .copyright{
-	float:left;
-	width:100%;
-	background:url(../img/line_border.gif) repeat-x;
-}
-.copyright p{
+	width:670px;
 	font-family: "LeagueGothicRegular", Arial, Helvetica, sans-serif;
 	font-size:24px;
-	text-transform:uppercase;
-	
-	padding:20px 0;
 }
 
 /* ----margin---- */
