@@ -47,13 +47,6 @@ nav ul li a:hover{
 	text-decoration:none;
 	color:#634d4a;
 }
-nav ul li.active{
-	background:url(../img/nav_active.png) no-repeat 26px 4px;
-}
-nav ul li.active a{
-	color:#fff;
-	text-shadow: #2b0d09 0px 1px 0px;
-}
 nav .bg_bottom{
 	background:url(../img/nav_bg.png) no-repeat bottom center;
 	height:30px;
