@@ -43,7 +43,7 @@ nav ul li a:hover{
 	background:#fff;
 	width:670px;
 	margin: 0 auto;
-	padding: 0 20px;
+	padding: 0 30px;
 }
 
 /* ----header---- */
@@ -63,20 +63,18 @@ nav ul li a:hover{
 /* ----sections---- */
 #home, #about, #contact{
 	padding:80px 0 420px 0;
-	width:100%;
 }
 
 /* ----columns---- */
 .columns{
-	width:100%;
 	margin-bottom:20px;
-	padding:10px;
 	overflow: hidden;
 }
 .two-column{
 	width:300px;
 	float:left;
-	margin-right:44px;
+	margin-right:30px;
+	margin-bottom: 20px;
 }
 .three-column{
 	width:200px;
@@ -147,9 +145,7 @@ nav ul li a:hover{
 }
 
 /* ----about---- */
-#about .last{
-	margin-left: -30px;
-}
+
 
 /* ----socialsites---- */
 .social_wrapper{
@@ -164,7 +160,6 @@ nav ul li a:hover{
 	float:left;
 }
 .social{
-	padding:0;
 	margin-top:7px;
 	float:right;
 	width:380px;

@@ -10,7 +10,7 @@ $(function(){
 		$skillbar.each(function(){
 			$(this).children('span').text($(this).attr('class').substr(4) + "%");
 			$(this).animate({
-				width:$(this).attr('class').substr(4) * 3
+				width:$(this).attr('class').substr(4) * 0.6 + '%'
 			},1000,function(){
 				$percNum.fadeIn();
 			});

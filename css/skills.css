@@ -11,10 +11,11 @@
 	font-weight:normal;
 	color:#575757;
 	font-family: "LeagueGothicRegular", Arial, Helvetica, sans-serif;
-	font-size:27px;
+	font-size:25px;
 	text-transform:uppercase;
 }
 .skills li span{
+	max-width: 60%;
 	position:absolute;
 	right:0;
 	font-weight:normal;
@@ -27,5 +28,5 @@ span[class^="bar"]{
 
 .skills li .percent{
 	position:absolute;
-	left:-55px;
+	left:-50px;
 }

@@ -1,0 +1,51 @@
+@media screen and (max-width:980px){
+  nav{
+    border:none;
+  }
+  nav ul{
+    display:none;
+  }
+  nav::after{
+    content: "a profile of chentao";
+    display:block;
+    color:#fff;
+    text-transform:uppercase;
+    padding:17px 30px;
+    font-size:12px;
+  }
+  .languages{padding:16px 15px;font-size:12px;}
+
+  #main-content{
+    width:100%;
+    padding:15px;
+    box-sizing: border-box;
+  }
+
+  .two-column, .three-column{
+    width:100%;
+    float:left;
+    margin-right:0;
+  }
+
+  .says blockquote{
+    background:url(../img/quote.png) no-repeat left center;
+    float:right;
+    width:100%;
+    padding-left:0;
+  }
+
+  h2{
+    font-size: 55px;
+  }
+
+  .skills li{
+    font-size:15px;
+  }
+  .skills li .percent{
+    left:-35px;
+  }
+
+  .social{
+    float: left;
+  }
+}
