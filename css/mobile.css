@@ -19,6 +19,7 @@
     width:100%;
     padding:15px;
     box-sizing: border-box;
+    overflow-x: hidden;
   }
 
   .two-column, .three-column{
