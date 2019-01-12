@@ -1,4 +1,7 @@
 @media screen and (max-width:980px){
+  body{
+    overflow-x: hidden;
+  }
   nav{
     border:none;
   }

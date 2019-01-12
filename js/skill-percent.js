@@ -18,7 +18,7 @@ $(function(){
 	}
 
 	$(window).scroll(function(){
-		if(skillbarIsNotShow && $(window).scrollTop() >= $about.offset().top + 200){
+		if(skillbarIsNotShow && $(window).scrollTop() >= $about.offset().top + 400){
 			display();
 			skillbarIsNotShow = false;
 		}
