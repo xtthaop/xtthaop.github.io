@@ -1,6 +1,9 @@
 @media screen and (max-width:980px){
+  body{
+    position:fixed;
+  }
   #home, #about, #contact{
-    padding:0 0 500px 0;
+    padding-bottom:500px;
   }
   nav{
     border:none;
