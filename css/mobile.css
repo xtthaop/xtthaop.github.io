@@ -1,6 +1,7 @@
 @media screen and (max-width:980px){
   body{
-    position:fixed;
+    width:100%;
+    overflow-x:hidden;
   }
   #home, #about, #contact{
     padding-bottom:500px;
