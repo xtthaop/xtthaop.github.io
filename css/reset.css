@@ -9,13 +9,10 @@
 	background:transparent;
 	color:#444;
 }
-html{
-	overflow-x: hidden;
-}
 body { 
 	font:13px/1.231 sans-serif; 
 	*font-size:small; 
-	overflow-x: hidden;
+	overflow: hidden;
 }
 ul li{list-style:none;}
 
