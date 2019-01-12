@@ -1,6 +1,7 @@
 @media screen and (max-width:980px){
   nav{
     border:none;
+    position: static;
   }
   nav ul{
     display:none;
