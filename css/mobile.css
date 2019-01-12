@@ -1,4 +1,7 @@
 @media screen and (max-width:980px){
+  #home, #about, #contact{
+    padding:0 0 500px 0;
+  }
   nav{
     border:none;
     position: static;
