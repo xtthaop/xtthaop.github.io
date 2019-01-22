@@ -187,6 +187,12 @@ nav ul li a:hover{
 .social .weibo a{
 	background:url(../img/icon_weibo.png) no-repeat;
 }
+.social .email a{
+	background:url(../img/icon_gmail.png) no-repeat;
+}
+.social .email a:hover::after{
+	content: ": chentao9602@gmail.com";
+}
 /* ----copyright---- */
 .copyright{
 	width:670px;
