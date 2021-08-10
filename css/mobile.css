@@ -14,7 +14,7 @@
     display:none;
   }
   nav::after{
-    content: "a profile of chentao";
+    content: "TAO CHEN";
     display:block;
     color:#fff;
     text-transform:uppercase;
